@@ -2,7 +2,7 @@
 INSTALL_APT=y #y or n
 
 # Do not edit below
-# install apt
+# Install apt
 if [ "$INSTALL_APT" = "y" ]; then
     echo "##################################"
     echo "### Install apt package....... ###"
