@@ -1,5 +1,5 @@
 # Parameter
-INSTALL_APT=y
+INSTALL_APT=y #y or n
 
 # Do not edit below
 # install apt
