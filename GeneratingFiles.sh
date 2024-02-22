@@ -11,6 +11,7 @@ if [ "$INSTALL_APT" = "y" ]; then
     sudo apt-get install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev libusb-1.0-0-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev device-tree-compiler pkg-config python3
 fi
 
+echo ""
 echo "###################################################"
 echo "####### Please do not include Windows PATH. #######"
 echo "###################################################"
@@ -28,6 +29,7 @@ git submodule update --init --recursive
 cd ./corev_apu/fpga/src/bootrom/
 python3 ./generate_dts.py
 make all CLOCK_FREQUENCY=25000000 HALF_CLOCK_FREQUENCY=12500000 DRAM_SIZE_64=0x20000000 UART_BITRATE=57600
+echo ""
 echo "##############################################"
 echo "####### Bootrom successfully created ! #######"
 echo "##############################################"
@@ -37,6 +39,7 @@ make fpga BOARD=nexys_video
 cd ../
 
 # Build Linux Images
+echo ""
 echo "#####################################"
 echo "####### Building Linux Images #######"
 echo "#####################################"
@@ -59,6 +62,7 @@ cp ../cva6/corev_apu/fpga/work-fpga/ariane_xilinx.mcs ./
 chmod 777 ./ariane_xilinx.mcs
 cp ../cva6-sdk/install64/uImage ./
 chmod 777 ./uImage
+echo ""
 echo "#####################################################################"
 echo "####### Finished Generating Bitstream File and Linux Images ! #######"
 echo "#####################################################################"
