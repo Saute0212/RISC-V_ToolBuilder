@@ -26,15 +26,6 @@ echo ""
 git clone https://github.com/Saute0212/cva6.git
 cd ./cva6/
 git submodule update --init --recursive
-cd ./corev_apu/fpga/src/bootrom/
-python3 ./generate_dts.py
-make all CLOCK_FREQUENCY=25000000 HALF_CLOCK_FREQUENCY=12500000 DRAM_SIZE_64=0x20000000 UART_BITRATE=57600
-echo ""
-echo "##############################################"
-echo "####### Bootrom successfully created ! #######"
-echo "##############################################"
-echo ""
-cd ../../../../
 make fpga BOARD=nexys_video
 cd ../
 
