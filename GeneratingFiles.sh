@@ -45,6 +45,12 @@ make images
 cd ../
 
 # Copying generated files
+echo ""
+echo "#####################################"
+echo "########### Copying Data ############"
+echo "#####################################"
+echo "Copying Data......."
+echo ""
 mkdir Generated_Files
 cd ./Generated_Files
 wget https://github.com/openhwgroup/cva6-sdk/releases/download/v0.3.0-op/bbl.bin
