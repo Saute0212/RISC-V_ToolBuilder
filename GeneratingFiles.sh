@@ -39,6 +39,8 @@ echo ""
 git clone https://github.com/openhwgroup/cva6-sdk.git
 cd ./cva6-sdk/
 git submodule update --init --recursive
+sed -i 's/BR2_PACKAGE_ETHTOOL=y/BR2_PACKAGE_ETHTOOL=n/' configs/buildroot64_defconfig
+sed -i -e 's/CONFIG_NET=y/CONFIG_NET=n/' -e 's/CONFIG_INET=y/CONFIG_INET=n/' -e 's/CONFIG_NETDEVICES=y/CONFIG_NETDEVICES=n/' -e 's/CONFIG_LOWRISC_DIGILENT_100MHZ=y/CONFIG_LOWRISC_DIGILENT_100MHZ=n/' configs/linux64_defconfig
 make images
 cd ../
 
