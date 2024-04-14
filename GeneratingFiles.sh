@@ -23,7 +23,7 @@ echo "####### Generate Bitstream File #######"
 echo "#######################################"
 echo "Creating Bitstream of cva6......."
 echo ""
-git clone https://github.com/Saute0212/cva6.git
+git clone https://github.com/openhwgroup/cva6.git
 cd ./cva6/
 git submodule update --init --recursive
 make fpga BOARD=nexys_video
