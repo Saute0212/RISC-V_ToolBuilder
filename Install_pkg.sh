@@ -59,6 +59,7 @@ echo "Update the package(apt, apt-get)."
 sudo apt update && sudo apt upgrade -y
 sudo apt-get update && sudo apt upgrade -y
 
+# Install package to be able to run screen command
 sudo apt install -y screen
 
 # Installation of optionally specified packages(apt, apt-get)
