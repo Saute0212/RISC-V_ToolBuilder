@@ -59,6 +59,8 @@ echo "Update the package(apt, apt-get)."
 sudo apt update && sudo apt upgrade -y
 sudo apt-get update && sudo apt upgrade -y
 
+sudo apt install -y screen
+
 # Installation of optionally specified packages(apt, apt-get)
 if [ "$InstallPkg_RiscvGnuToolchain" = "y" ]; then
   echo "Install the necessary packages with riscv-gnu-toolchain."
